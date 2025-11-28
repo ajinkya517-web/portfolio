@@ -1,0 +1,464 @@
+/* GLOBAL */
+body {
+    cursor: url('https://cur.cursors-4u.net/cursors/cur-2/cur114.cur'), auto;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding-bottom: 80px;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    z-index: 10;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #00eaff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #00eaff;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 140px 20px 70px;
+}
+
+/* UNIVERSAL BUTTON STYLE */
+.btn-main {
+    padding: 12px 26px;
+    background: #00eaff;
+    color: #000;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.btn-main:hover {
+    background: #0099bb;
+    transform: translateY(-3px);
+}
+
+
+.hero-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid #00eaff;
+    object-fit: cover;
+    animation: pop 1s ease-in-out;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.hero-title {
+    margin-top: 20px;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    margin-top: 8px;
+    font-size: 18px;
+    opacity: 0.85;
+}
+
+/* HERO BUTTONS */
+.hero-buttons {
+    margin-top: 25px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #00eaff;
+    color: #000;
+    margin-right: 12px;
+}
+
+.btn-primary:hover {
+    background: #0099bb;
+}
+
+.btn-secondary {
+    border: 2px solid #00eaff;
+    color: #00eaff;
+}
+
+.btn-secondary:hover {
+    color: #000;
+    background: #00eaff;
+}
+
+/* CARD STYLE */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    padding: 25px;
+    width: 85%;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* SKILLS SECTION */
+.small-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.small-icon-card {
+    background: rgba(255,255,255,0.15);
+    padding: 14px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    backdrop-filter: blur(6px);
+}
+
+.small-icon-card:hover {
+    transform: translateY(-6px) scale(1.05);
+    background: rgba(255,255,255,0.3);
+}
+
+.small-icon-card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.small-icon-card p {
+    font-size: 13px;
+    font-weight: 600;
+    color: #00eaff;
+}
+
+/* PROJECT CARDS */
+.project-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card {
+    padding: 18px;
+    background: rgba(255,255,255,0.12);
+    margin: 15px 0;
+    border-radius: 12px;
+    transition: 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    background: rgba(255,255,255,0.25);
+    border: 1px solid #00eaff;
+    box-shadow: 0px 8px 20px rgba(0, 238, 255, 0.25);
+}
+
+/* EXPERIENCE SECTION */
+.exp-card {
+    margin-bottom: 20px;
+}
+
+.exp-card span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Hide projects from homepage */
+#projects {
+    display: none;
+}
+
+/* PREMIUM CONTACT SECTION */
+.contact-section {
+    width: 85%;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* LEFT SIDE */
+.contact-left {
+    flex: 1;
+}
+
+.contact-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.contact-subtitle {
+    font-size: 16px;
+    opacity: 0.85;
+    margin-bottom: 30px;
+    line-height: 1.7;
+    max-width: 500px;
+    text-align: left;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-box h3 {
+    color: #00eaff;
+}
+
+.contact-box p {
+    font-size: 15px;
+}
+
+/* SOCIAL BUTTONS */
+.social-links {
+    margin-top: 25px;
+    display: flex;
+    gap: 18px;
+}
+
+.social-btn {
+    width: 42px;
+    height: 42px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.social-btn img {
+    width: 22px;
+    height: 22px;
+}
+
+.social-btn:hover {
+    background: #00eaff;
+    transform: scale(1.15);
+    box-shadow: 0px 0px 15px rgba(0, 238, 255, 0.8);
+}
+
+/* RIGHT SIDE */
+.contact-right {
+    flex: 1;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    width: 100%;
+}
+
+/* Placeholder */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ffffff;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* Send button in right corner */
+.btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.send-btn-large {
+    width: 180px;
+    padding: 14px 20px;
+    font-size: 16px;
+    background: #00eaff;
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.send-btn-large:hover {
+    background: #0099bb;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+
+    .contact-title {
+        font-size: 28px;
+    }
+
+    html {
+    scroll-behavior: smooth;
+}
+
+}
+.btn-main,
+button,
+a {
+    cursor: pointer;
+}
+
+/* Smooth transition for theme change */
+* {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Toggle container */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+/* Hide checkbox */
+#theme-switch {
+  display: none;
+}
+
+/* Toggle button UI */
+.toggle-label {
+  width: 55px;
+  height: 30px;
+  background: #ddd;
+  border-radius: 25px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.toggle-label span {
+  font-size: 18px;
+}
+
+/* Moving circle indicator */
+.toggle-label::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.3s ease;
+}
+
+/* When dark mode is enabled */
+#theme-switch:checked + .toggle-label {
+  background: #222;
+}
+
+#theme-switch:checked + .toggle-label::after {
+  transform: translateX(25px);
+}
+
+/* THEME COLORS */
+body.light-theme {
+  background: #ffffff;
+  color: #000000;
+}
+
+body.dark-theme {
+  background: #0b0f13;
+  color: #ffffff;
+}
+
