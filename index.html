@@ -182,19 +182,21 @@
 
     <footer>
         <p>© 2025 Ajinkya Mangnale | DevOps Portfolio</p>
-        <p>Visitors: <span id="visitor-count">Loading...</span></p>
+        https://api.countapi.xyz/update/ajinkya-portfolio-site/visits?amount=1
     </footer>
 
     <script>
-fetch("https://api.countapi.xyz/hit/ajinkya-portfolio-site/visits")
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById("visitor-count").textContent = data.value;
-    })
-    .catch(() => {
-        document.getElementById("visitor-count").textContent = "N/A";
-    });
+// increment counter
+fetch("https://api.countapi.xyz/update/ajinkya-portfolio-site/visits?amount=1")
+  .then(res => res.json())
+  .then(res => {
+    document.getElementById("visitor-count").textContent = res.value;
+  })
+  .catch(() => {
+    document.getElementById("visitor-count").textContent = "N/A";
+  });
 </script>
+
 
 
 </body>
