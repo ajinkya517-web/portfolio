@@ -182,14 +182,14 @@
 
     <footer>
         <p>© 2025 Ajinkya Mangnale | DevOps Portfolio</p>
-       <p>Visitors: <span id="visitor-count">Loading...</span></p>
+       <p>Visitors: <span id="visitor-count">0</span></p>
     </footer>
 
    <script>
-fetch("https://api.countapi.xyz/update/ajinkya-portfolio-site/visits?amount=1")
-  .then(response => response.json())
+fetch("https://api.simplecount.io/ajinkya-portfolio")
+  .then(res => res.json())
   .then(data => {
-    document.getElementById("visitor-count").textContent = data.value;
+    document.getElementById("visitor-count").textContent = data.count;
   })
   .catch(() => {
     document.getElementById("visitor-count").textContent = "N/A";
